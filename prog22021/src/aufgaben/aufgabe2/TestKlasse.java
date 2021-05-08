@@ -4,7 +4,7 @@ public class TestKlasse {
 
 	public static void main(String[] args) {
 	
-		MyInteger mi1=null, mi2=null, mi3=null, mi4=null, mi5=null, mi6=null, mi7=null;
+		MyInteger mi1=null, mi2=null, mi3=null, mi4=null, mi5=null, mi6=null;
 		
 		try {
 			mi1 = new MyInteger("2147483750");
@@ -48,13 +48,10 @@ public class TestKlasse {
 			System.out.println("mi6 : " + e.getMessage());
 		}
 		
-		try {
+		//equals muss noch bearbeitet werden
 			System.out.println("mi1 equals mi2 ? : " + mi1.equals(mi2));
-			System.out.println("mi3 equals mi4 ? : " + mi3.equals(mi4));
 			System.out.println("mi1 equals mi4 ? : " + mi1.equals(mi4));
-		} catch (IllegalArgumentException e) {
-			System.out.println("Der Vergleich ist nicht möglich");
-		}
+		
 	}
 	
 
