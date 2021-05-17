@@ -1,11 +1,11 @@
 package aufgaben.aufgabe4;
 
 import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.jupiter.api.Test;
 
+
 class SingleNumberTest {
-	
+
 	int [] nums = {5,1,2,1,2};
 	int [] nums1 = {1,2,1,2};
 	int [] nums2 = {1};
@@ -14,13 +14,25 @@ class SingleNumberTest {
 	@Test
 	void testSingleNumber()
 	{
-		assertTrue(1==SingleNumber.singleNumber(nums2),"Input: [1] Expected output: 1");
-		assertTrue(5==SingleNumber.singleNumber(nums),"Input: [5,1,2,1,2] Expected output: 5");
-		assertTrue(-1==SingleNumber.singleNumber(nums1),"Input: [1,2,1,2] Expected output: -1");
-		assertFalse(6==SingleNumber.singleNumber(nums), "Input: [5,1,2,1,2] Expected output: 5");	
-		assertEquals(5, SingleNumber.singleNumber(nums), "Input: [5,1,2,1,2] Expected output: 5");
+		SingleNumber sn = new SingleNumber();
+		int zahl = sn.singleNumber(nums);		
+		assertEquals(zahl, 5, "Der Found ist fehlerhaft");
+	}
+	
+	@Test
+	void testSingleNumber2()
+	{
+		SingleNumber sn = new SingleNumber();
+		int zahl = sn.singleNumber(nums2);		
+		assertEquals(zahl, 1, "Der Found ist fehlerhaft");
 	}
 
 
-
+	@Test
+	void testSingleNumber1()
+	{
+		
+		assertEquals(SingleNumber.singleNumber(nums1), 6, "Der Found ist fehlerhaft");
+	}
+	
 }

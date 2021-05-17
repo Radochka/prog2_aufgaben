@@ -1,4 +1,4 @@
-package vorlesungen.junit;
+package vorlesungen.junit.time;
 
 
 
