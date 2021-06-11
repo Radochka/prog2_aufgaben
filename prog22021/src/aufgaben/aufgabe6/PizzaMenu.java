@@ -9,6 +9,7 @@ import java.util.Set;
 import javax.swing.JOptionPane;
 
 
+
 public class PizzaMenu {
 	
 
@@ -62,7 +63,7 @@ public class PizzaMenu {
 				eingabeOk = true;
 			}
 			catch(NumberFormatException e) {
-				System.out.println("Eingabe muss eine Zahl sein, z.B 3");
+				System.out.println("Eingabe muss eine Zahl sein, z.B 3.5");
 				eingabeOk = false;
 			}
 
@@ -70,7 +71,7 @@ public class PizzaMenu {
 		return preis;
 	}
 	public static void affordablePizza(Map<String, Double> menu, double maxPrice) {
-		System.out.println("Eingegebener Betrag : " + maxPrice + " Euro");
+		System.out.printf("Eingegebener Betrag  : %.2f Euro \n", maxPrice);
 		Set<String> pizza = new HashSet<>();
 		for(Map.Entry<String, Double> entry : menu.entrySet()) {
 			if(entry.getValue().compareTo(maxPrice) <= 0) {
@@ -107,6 +108,7 @@ public class PizzaMenu {
 		System.out.println(a == b); // vergleicht Werte, b wird zum long übertragen (hier findet unboxing statt)
 		System.out.println(b == c); // hier werden Referenzobjekte verglichen, einer ist b und die andere c, nicht die werte
 		System.out.println(b.intValue() == c.intValue()); // hier werden werte verglichen
+	
 
 		
 		System.out.printf("%n-------------------------Punkt 2-4 ------------------------%n");
@@ -129,8 +131,8 @@ public class PizzaMenu {
 		printMenu(menu);
 		
 		System.out.printf("%n-------------------------Punkt 7 ------------------------%n");
-//		double maxPrice = maxPrice();
-//		affordablePizza(menu, maxPrice);
+		double maxPrice = maxPrice();
+		affordablePizza(menu, maxPrice);
 		
 		System.out.printf("%n-------------------------Punkt 8 ------------------------%n");
 
@@ -147,9 +149,5 @@ public class PizzaMenu {
 		printMenu(menu);
 		System.out.printf("%n-------------------------Punkt 10 ------------------------%n");
 		
-		for (Map.Entry<String, Double> entry : menu.entrySet()) {
-			System.out.printf("%s : %.2f %n", entry.getKey(), entry.getValue());
-		}
-
 	}
 }
