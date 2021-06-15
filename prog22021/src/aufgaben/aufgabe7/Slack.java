@@ -8,20 +8,18 @@ public class Slack implements Publisher{
 	private int nrOfMessages;
 	
 	Slack(){
-		this.listeners = new TreeSet<>();
+		this.listeners = new HashSet<>();
 		this.nrOfMessages = 0;
 		
 	}
 	@Override
 	public boolean register(Listener listener) {
-		if(this.listeners.add(listener)) return true;
-		else return false;
+		return listeners.add(listener);
 	}
 
 	@Override
 	public boolean unregister(Listener listener) {
-		if(this.listeners.remove(listener)) return true;
-		else return false;
+		return listeners.remove(listener);
 	}
 
 	@Override
@@ -33,12 +31,12 @@ public class Slack implements Publisher{
 
 	@Override
 	public String getUpdate(Listener listener) {
-		return "Breaking New" + this.nrOfMessages;
+		return "Breaking New " + this.nrOfMessages;
 	}
 	
 	public void publishNew() {
-		this.notifyListeners();
 		nrOfMessages++;
+		this.notifyListeners();
 	}
 
 }
