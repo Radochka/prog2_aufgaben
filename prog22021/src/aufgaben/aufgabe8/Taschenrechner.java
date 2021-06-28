@@ -63,8 +63,6 @@ public class Taschenrechner extends JFrame{
         mitte.add(new JButton(","));
         mitte.add(new JButton("="));
 
-       
-		
 		panel.add(oben, BorderLayout.NORTH);
 		panel.add(mitte, BorderLayout.CENTER);
 		

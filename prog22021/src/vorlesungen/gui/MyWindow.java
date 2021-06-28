@@ -15,10 +15,9 @@ public class MyWindow extends JFrame{ // wir erben von Klasse JFrame
 		this.setTitle("My first Window"); // Name des Fensters 
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // was soll passieren, bei x drucken
 		this.getContentPane().setBackground(Color.CYAN);
-		JPanel content = this.initContent();
-		this.getContentPane().add(content);
+		this.getContentPane().add(this.initContent());
 		
-		this.setSize(700, 500); // die Größe des Fensters
+		this.setSize(400, 300); // die Größe des Fensters
 		this.setLocation(300, 200); // Position des Fensters auf dem Desktop
 		this.setVisible(true); // veröffentlichung des Fensters		
 		
