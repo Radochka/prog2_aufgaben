@@ -1,3 +1,4 @@
+package uebungen.uebung11;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -18,7 +19,7 @@ public class RechteckeZeichnen extends JFrame implements MouseListener, MouseMot
     public RechteckeZeichnen()
     {
         super();
-        this.setTitle(...);
+        this.setTitle("Rechteck");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
 	
 	//Collection für die Rechtecke anlegen

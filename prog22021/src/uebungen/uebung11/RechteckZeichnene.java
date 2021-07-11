@@ -1,4 +1,4 @@
-package uebungen.uebung12;
+package uebungen.uebung11;
 
 import java.awt.Color;
 import java.awt.Graphics;

@@ -1,4 +1,4 @@
-package uebungen.uebung12;
+package uebungen.uebung11;
 
 public class Rechteck {
 	private int x, y, wigth, heigth;
